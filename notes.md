@@ -36,3 +36,18 @@ https://raw.githubusercontent.com/projectcalico/calico/v3.24.0/manifests/calico.
 
 kubectl apply -f
 https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+
+
+---------------------------------------Steps-------------------------------------------------------
+
+1. # How to connect clusters?
+- run command : sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+- use the token to connect the master with worker 
+
+2. # Create kube directory which will have Kube config file for authentication
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u) :$(id -g) $HOME/.kube/config
+
+
