@@ -20,8 +20,12 @@ CLOUDINARY_KEY=876432814896329
 CLOUDINARY_SECRET=sewZXU-P9wY0UCeL9ANeHBZygLw
 MAPBOX_TOKEN=sk.eyJ1IjoiZGFueWFsa2hhbnphZGEiLCJhIjoiY20wMXNjbW9rMWRyejJybzRydDl0b3A1biJ9.RC6Yj3BzO0IH32D1Zc_E2g
 DB_URL:"mongodb+srv://danyalkhanzada:FU53JtEDJ8xEoGpg@danyal-devops.1dnpo.mongodb.net/?retryWrites=true&w=majority&appName=danyal-devops"
-SECRET
+SECRET:devopsdanyal
 
 ## 3. Create Database
 
 1. MongoDB (Collection) - Cloud database > Container
+    - Created cluster on MongoDb
+    - Create username and password
+    - Went to network access under security and changed created IP address to 0.0.0.0/0 so i can access it from anywhere. 
+    - 
