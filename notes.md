@@ -51,10 +51,17 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u) :$(id -g) $HOME/.kube/config
 
 3. # kubectl - Calico project for networking and nginx
-kubectl apply -f
-https://raw.githubusercontent.com/projectcalico/calico/v3.24.0/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.0/manifests/calico.yaml
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+
+
+4. # Install AWS CLI on Ubuntu
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o               
+sudo apt install unzip
+unzip awscliv2.zip
+sudo ./aws/install
 
 
 
