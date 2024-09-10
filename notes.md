@@ -33,4 +33,12 @@ SECRET:devopsdanyal
 
 
 2. App deployment on DEV Environment
-    - 
+    - two Ec2 instances are created. 1. for Jenkins with T2.large 2. SonarQube with T2.Medium
+    - download Java in the instance - sudo apt install openjdk-17-jre-headless -y
+    - installing jenkins on the jenkins ec2 instance and created script directory where excuetable code is pasted from jenkins install website for ubuntu
+    - ./jen.sh executed the transaction
+    - installing docker on the ec2 
+    - opened browser and put Publicip:3030 and copies the jenkins user /var/lib/jenkins/secrets/initialAdminPassword
+    - Ran command sudo cat /var/lib/jenkins/secrets/initialAdminPassword to get the password and pasted it on browser to get into jenkins
+    - changed the permission on terminal to " sudo chmod 666 /var/run/docker.sock "
+
