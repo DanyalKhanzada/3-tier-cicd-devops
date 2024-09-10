@@ -28,4 +28,9 @@ SECRET:devopsdanyal
     - Created cluster on MongoDb
     - Create username and password
     - Went to network access under security and changed created IP address to 0.0.0.0/0 so i can access it from anywhere. 
+    
+    - it is connected to the database after putting in the .env file with Cloundinary text above
+
+
+2. App deployment on DEV Environment
     - 
