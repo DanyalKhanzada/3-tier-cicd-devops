@@ -42,3 +42,30 @@ SECRET:devopsdanyal
     - Ran command sudo cat /var/lib/jenkins/secrets/initialAdminPassword to get the password and pasted it on browser to get into jenkins
     - changed the permission on terminal to " sudo chmod 666 /var/run/docker.sock "
 
+    - SonarQube - Ec2 instance 
+    - Downloaded Docker to create an image
+    - docker run -d --name sonar -p 9000:9000 sonarqube:lts-community 
+     it will run on port 9000
+
+     - login passowrd sonarqube - admin pwd danyal007
+    - Jenkins - danyal pwd danyal007
+
+    - Downloaded in jenkins following plugins
+            - Kubernetes , kubernetes cli, docker, docker pipelines, sonarqube, 
+
+    - trivy plugin is not available. downloading trivy directly
+    sudo apt-get install wget apt-transport-https gnupg lsb-release
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt-get install trivy
+
+- created as script and pasted the above command and ran the script ./tri.sh (where the script is savd)
+
+- configure tools on jenkins server by going to manage jenkins -> tools and thn configured all of them 
+
+next step: configure sonarqube server inside jenkins
+from user admin on sonarqube - create a token -> copy token
+copy the token and go to jenkins and manage jenkins -> credential -> add new credentials -> select secret text and paste it. 
+
+next step : start creating pipeline
