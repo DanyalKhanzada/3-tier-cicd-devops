@@ -70,4 +70,4 @@ copy the token and go to jenkins and manage jenkins -> credential -> add new cre
 
 next step : start creating pipeline
 
-*****
+ill have to resrart again
