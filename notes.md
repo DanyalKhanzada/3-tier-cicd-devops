@@ -69,3 +69,5 @@ from user admin on sonarqube - create a token -> copy token
 copy the token and go to jenkins and manage jenkins -> credential -> add new credentials -> select secret text and paste it. 
 
 next step : start creating pipeline
+
+*****
