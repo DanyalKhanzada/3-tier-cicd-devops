@@ -70,4 +70,3 @@ copy the token and go to jenkins and manage jenkins -> credential -> add new cre
 
 next step : start creating pipeline
 
-h** how do we enter the list 
