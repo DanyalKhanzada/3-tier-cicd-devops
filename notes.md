@@ -69,4 +69,46 @@ from user admin on sonarqube - create a token -> copy token
 copy the token and go to jenkins and manage jenkins -> credential -> add new credentials -> select secret text and paste it. 
 
 next step : start creating pipeline
+- Creating pipeline 
 
+" pipeline {
+    agent any
+
+    tools {
+        nodejs 'node21'
+    }
+    
+    # Sonar cube scanner #
+    environment {
+        SCANNER_HOME= toll 'sonar-scanner'
+    }
+    
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/DanyalKhanzada/3-tier-full-stack.git'
+            }
+    stages {
+        stage('install package dependencies') {
+            steps {
+                sh "npm install"
+            }
+    stages {
+        stage('Unit Tests') {
+            steps {
+                sh "npm test"
+            }
+    stages {
+        stage('trivy FS scan') {
+            steps {
+                sh "trivy fs --format table -o fs-report.html ."
+            }
+    stages {
+        stage('SonarQube') {
+            steps {
+                sh " $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=Campground -Dsonar.projectName=Campground"
+            }
+        }
+    }
+}
+}"
